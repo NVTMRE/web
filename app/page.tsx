@@ -14,12 +14,12 @@ export default async function Page() {
 
 	return (
 		<main className="grid grid-cols-1 [&>div]:border-b">
-			<div className="grid md:grid-cols-2 px-[5%]">
+			<div className="grid md:grid-cols-2 px-4 md:px-[5%]">
 				<div className="h-[50vh] flex items-center justify-center md:justify-start">
 				<Logo size={150} />
 				<div>
 					<h1>Hi I'm <b>NVTMRE</b></h1>
-					<p>Software Developer</p>
+				<p className="max-w-md text-muted-foreground">Building web applications, desktop tools and automation workflows with Next.js, React, Tauri, Rust and Python.</p>
 				</div>
 				</div>
 				<div className="hidden md:flex items-center justify-end">
@@ -30,12 +30,12 @@ export default async function Page() {
 				<HoverCard className="flex flex-col">
 				<div className="flex flex-col">
 					<h3 className="font-medium">Web Development</h3>
-					<p className="text-muted-foreground text-sm">Full-stack web apps with Next.js and React — from database to polished UI, built to scale.</p>
+				<p className="text-muted-foreground text-sm">Full-stack web apps with Next.js and React — from backend APIs to polished interfaces, built to scale.</p>
 				</div>
 				</HoverCard>
 				<HoverCard className="flex flex-col">
 				<h3 className="font-medium">Desktop & Automation</h3>
-				<p className="text-muted-foreground text-sm">Native desktop apps with Tauri and Rust, plus Python scripts that eliminate repetitive work.</p>
+			<p className="text-muted-foreground text-sm">Native desktop apps with Tauri and Rust, plus Python automation scripts that remove repetitive tasks and speed up operations.</p>
 				</HoverCard>
 				<HoverCard className="flex flex-col">
 				<h3 className="font-medium">Infrastructure</h3>
@@ -51,12 +51,12 @@ export default async function Page() {
 				</div>
 			</div>
 			<div className="grid md:grid-cols-3 divide-x divide-border">
-				<div className="flex justify-center items-center p-8"><h3 className="font-medium">Tech Stack</h3></div>
-				<Marquee pauseOnHover className="[--duration:30s] md:col-span-2">
+				<div className="flex justify-center items-center py-8"><h3 className="font-medium">Tech Stack</h3></div>
+				<Marquee pauseOnHover className="[--duration:30s] md:col-span-2 pb-8 md:pb-0">
 					{techStack.map((tech) => <TechStackRender key={tech.name} tech={tech} />)}
 				</Marquee>
 			</div>
-			<div className="px-[5%] py-12 flex flex-col items-center justify-center gap-4 text-center">
+			<div className="px-4 md:px-[5%] py-12 flex flex-col items-center justify-center gap-4 text-center">
 				<p className="text-sm uppercase tracking-[0.33em] text-green-500">Have a project in mind?</p>
 				<h2 className="text-3xl font-semibold">Let's talk.</h2>
 				<Link href="/contact">

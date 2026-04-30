@@ -36,11 +36,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
     >
-      <body className="overflow-x-hidden">
+      <body>
         <ThemeProvider>
           <LightRays className="fixed inset-0 -z-10 overflow-hidden" color="oklch(0.432 0.232 292.759)" speed={10} count={8} length="35vh" />
           <Header />
-          <div className="relative md:border-x md:mx-[18%] bg-background/75 backdrop-blur-md z-40 overflow-y-auto">
+          <div className="relative md:border-x md:max-w-screen-xl md:mx-auto bg-background/75 backdrop-blur-md z-40 overflow-y-auto">
             {children}
           </div>
           <Footer />

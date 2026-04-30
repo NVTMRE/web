@@ -30,7 +30,7 @@ export default function HeaderNav() {
               createPortal(
                 <div
                   className={cn(
-                    "fixed left-0 right-0 top-12 bottom-0 z-[60] backdrop-blur-xl transition-opacity bg-background/5",
+                    "fixed left-0 right-0 top-12 bottom-0 z-[60] backdrop-blur-xl transition-opacity bg-background/5 overflow-x-hidden",
                     show ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
                   )}
                   onClick={() => setShow(false)}
@@ -39,7 +39,7 @@ export default function HeaderNav() {
                     <Link href={item.href} key={item.name}>
                         <Button variant={"ghost"} 
                             className={cn(
-                                "flex justify-start p-8 w-screen rounded-none text-sm border-b-border",
+                                "flex justify-start p-8 w-full max-w-full rounded-none text-sm border-b-border",
                                 pathname === item.href && "bg-green-500 text-background",
                             )}
                         >

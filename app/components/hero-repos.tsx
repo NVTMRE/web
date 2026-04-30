@@ -15,7 +15,7 @@ export default async function HeroRepos() {
     }
 
     return (
-        <div className="w-full grid grid-cols-3 gap-8">
+        <div className="w-full grid md:grid-cols-3 gap-4 md:gap-8">
             {repos?.map(repo => <RepoCard key={repo.fullName} {...repo} />)}
         </div>
     )

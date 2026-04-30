@@ -21,7 +21,7 @@ export default function RepoCard({
                 <CardHeader className="flex-1">
                     <CardTitle>{name ? upperFirst(name) : "No name"}</CardTitle>
                     <CardAction className="text-muted-foreground">{new Date(updatedAt).toLocaleDateString()}</CardAction>
-                    <CardDescription>
+                    <CardDescription className="min-h-[60px]">
                         {description ? description : "No description provided."}
                     </CardDescription>
                 </CardHeader>
